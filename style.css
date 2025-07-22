@@ -1,0 +1,297 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-image: url('imagenes/wallpaper_front.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+/* Titulares */
+h1, h2 {
+  color: #cedeee;
+  text-shadow: #000000 1px 1px 2px;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  border-bottom: 2px solid #bbdcfa;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+/* Secciones */
+section {
+  margin-bottom: 2rem;
+}
+
+/* Tarjetas de producto y pedido */
+#productos-container > div,
+.pedido {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+#productos-container > div:hover,
+.pedido:hover {
+  transform: translateY(-3px);
+}
+
+/* Imágenes */
+img {
+  display: block;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+}
+
+/* Formularios */
+form {
+  background-color: #fff;
+  padding: 1.5rem;
+  border: 1px solid #ddddddfb;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  max-width: 600px;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+button[type="button"] {
+  background-color: #e74c3c;
+}
+
+button[type="button"]:hover {
+  background-color: #c0392b;
+}
+
+/* Pedido */
+.pedido-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.pedido-item input {
+  flex: 1;
+}
+
+ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+ul li {
+  margin-bottom: 0.3rem;
+}
+
+/* Contenedor principal de pedidos */
+#pedidos-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pedido-item {
+    flex-direction: column;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: 50px 1.5fr 3fr 1fr 1.5fr 80px 1fr 120px;
+  gap: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.50);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+}
+
+/* Encabezado estilo */
+.grid-header {
+  display: contents; 
+  font-weight: 700;
+  color: #222;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.grid-header > div {
+  padding: 8px 5px;
+}
+
+/* Cada fila es un grid igual */
+.grid-row {
+  display: contents;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.50);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-top: 8px;
+  padding: 6px 0;
+  transition: background-color 0.3s ease;
+}
+
+.grid-row:hover > div {
+  background-color: #fffbf0;
+  border-radius: 8px;
+}
+
+.grid-row > div {
+  padding: 6px 5px;
+  display: flex;
+  align-items: center;
+  overflow-wrap: anywhere;
+}
+
+/* Imagen */
+.grid-row img {
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Botón eliminar */
+.btn-eliminar {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  background-color: #c0392b;
+}
+
+
+@media (max-width: 768px) {
+  .grid-productos {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0.5rem;
+  }
+
+  .grid-header, .grid-row {
+    display: inline-grid;
+    grid-template-columns: repeat(8, minmax(50px, max-content));
+    gap: 10px 15px;
+  }
+}
+
+.grid-pedidos {
+  display: grid;
+  grid-template-columns: 80px 180px 1.5fr 100px;
+  gap: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.50);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Header pedidos */
+.grid-header-pedidos {
+  display: contents;
+  font-weight: 700;
+  color: #222;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.grid-header-pedidos > div {
+  padding: 8px 5px;
+}
+
+/* Filas pedidos */
+.grid-row-pedido {
+  display: contents;
+  align-items: center;
+  background-color: rgba(43, 42, 42, 1);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-top: 8px;
+  padding: 6px 0;
+  transition: background-color 0.3s ease;
+}
+
+.grid-row-pedido:hover > div {
+  background-color: #fffbf0;
+  border-radius: 8px;
+}
+
+.grid-row-pedido > div {
+  padding: 6px 5px;
+  overflow-wrap: anywhere;
+}
+
+/* Responsive para pedidos */
+@media (max-width: 768px) {
+  .grid-pedidos {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0.5rem;
+  }
+
+  .grid-header-pedidos, .grid-row-pedido {
+    display: inline-grid;
+    grid-template-columns: 80px 180px minmax(150px, max-content) 100px;
+    gap: 10px 15px;
+  }
+}

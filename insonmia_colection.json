@@ -1,0 +1,242 @@
+{
+  "type": "collection.insomnia.rest/5.0",
+  "name": "tpFinal-techlab",
+  "meta": {
+    "id": "wrk_5b6ab7d86c9341a8b7c8aafca97bdfe2",
+    "created": 1751306422581,
+    "modified": 1753148269959,
+    "description": ""
+  },
+  "collection": [
+    {
+      "name": "Proyecto Integrador",
+      "meta": {
+        "id": "fld_f31036d4f56a42dcb8b934a615c9bbf0",
+        "created": 1751306747759,
+        "modified": 1751306763303,
+        "sortKey": -1751306747759,
+        "description": ""
+      },
+      "children": [
+        {
+          "url": "http://localhost:8080/api/pedidos",
+          "name": "Listar Pedidos",
+          "meta": {
+            "id": "req_04339b345f174a6bbdbe8e73ab2347d1",
+            "created": 1689999999999,
+            "modified": 1753149351735,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1753149351697
+          },
+          "method": "GET",
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "http://localhost:8080/api/pedidos",
+          "name": "Crear Pedido",
+          "meta": {
+            "id": "req_4b02ca1212ed410a8bddde2def80a6ab",
+            "created": 1689999999999,
+            "modified": 1753149353734,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1753149351597
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n  \"productoIds\": [4, 5],\n  \"cantidades\": [2, 1]\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "http://localhost:8080/api/productos",
+          "name": "Crear Producto",
+          "meta": {
+            "id": "req_5c4e01b2534d4926a8f092cf171eeb98",
+            "created": 1689999999999,
+            "modified": 1753149357823,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1753149351622
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n  \"nombre\": \"Espada Larga\",\n  \"descripcion\": \"Espada medieval de acero\",\n  \"precio\": 150.0,\n  \"categoria\": \"Armas\",\n  \"imagen\": \"http://miimagen.com/espada.png\",\n  \"stock\": 10\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "http://localhost:8080/api/productos",
+          "name": "Listar Productos",
+          "meta": {
+            "id": "req_ae4c6e13616b4e7ea1dcd88b34f0ed3c",
+            "created": 1689999999999,
+            "modified": 1753149359831,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1753149351609.5
+          },
+          "method": "GET",
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "http://localhost:8080/api/productos/1",
+          "name": "Obtener Producto por ID",
+          "meta": {
+            "id": "req_b16e0b122fb1448da182866bc03b87ea",
+            "created": 1689999999999,
+            "modified": 1753149355935,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1753149351647
+          },
+          "method": "GET",
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "http://localhost:8080/api/productos/3",
+          "name": "Eliminar Producto",
+          "meta": {
+            "id": "req_c05cf3c737d74046843055a3351ee146",
+            "created": 1753148713609,
+            "modified": 1753149361936,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1753149351603.25
+          },
+          "method": "DELETE",
+          "headers": [
+            {
+              "name": "User-Agent",
+              "value": "insomnia/11.2.0"
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "http://localhost:8080/api/productos/1",
+          "name": "modificar producto",
+          "meta": {
+            "id": "req_1619aa931bd54364a1d5311cc961d712",
+            "created": 1753149377795,
+            "modified": 1753149495863,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1753149351797
+          },
+          "method": "PUT",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n  \"nombre\": \"Espada de adamanyium\",\n  \"descripcion\": \"Espada mágica que inflige daño de fuego\",\n  \"precio\": 1500.0,\n  \"categoria\": \"Arma\",\n  \"imagen\": \"https://cpng.pikpng.com/pngl/s/313-3138982_espada-cool-sword-pixel-art-clipart.png\",\n  \"stock\": 7\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/11.2.0"
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        }
+      ]
+    }
+  ],
+  "cookieJar": {
+    "name": "Default Jar",
+    "meta": {
+      "id": "jar_10f97de7a046de544f1ff640d61afd6686c7c89e",
+      "created": 1751306422599,
+      "modified": 1751306422599
+    }
+  },
+  "environments": {
+    "name": "Base Environment",
+    "meta": {
+      "id": "env_10f97de7a046de544f1ff640d61afd6686c7c89e",
+      "created": 1751306422596,
+      "modified": 1751306422596,
+      "isPrivate": false
+    }
+  }
+}

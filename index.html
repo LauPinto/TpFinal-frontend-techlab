@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestión de Productos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Catálogo de Productos</h1>
+
+  <section id="productos-container"></section>
+
+  <h2>Agregar nuevo producto</h2>
+  <form id="form-agregar">
+    <input type="text" placeholder="Nombre" name="nombre" required />
+    <input type="text" placeholder="Descripción" name="descripcion" required />
+    <input type="number" placeholder="Precio" name="precio" required />
+    <input type="text" placeholder="Categoría" name="categoria" required />
+    <input type="text" placeholder="URL imagen" name="imagen" required />
+    <input type="number" placeholder="Stock" name="stock" required />
+    <button type="submit">Agregar</button>
+  </form>
+
+  <h2>Crear Pedido</h2>
+  <form id="form-pedido">
+    <div id="pedido-items">
+      <div class="pedido-item">
+        <input type="number" name="productoId" class="producto-id" placeholder="ID Producto" required />
+        <input type="number" name="cantidad" class="producto-cantidad" placeholder="Cantidad" required />
+        <button type="button" onclick="this.parentElement.remove()">Eliminar</button>
+      </div>
+    </div>
+    <button type="button" id="agregar-item">Agregar otro producto</button>
+    <button type="submit">Enviar Pedido</button>
+  </form>
+
+  <h2>Pedidos realizados</h2>
+<section id="pedidos-container"></section>
+
+  <script src="script.js"></script>
+</body>
+</html>
